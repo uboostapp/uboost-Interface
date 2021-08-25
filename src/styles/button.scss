@@ -1,0 +1,97 @@
+@import '../theme.scss';
+
+.header-btn {
+  @include btn-base();
+  width: 10rem;
+  //min-width: 10rem;
+  background: var(--theme-button-bg-color);
+  border-radius: 6px;
+  margin-right: 2rem;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background: var(--theme-button-bg-color);
+  }
+}
+
+.header-connect-btn {
+  @include btn-base();
+  width: 10rem;
+  border-radius: 6px;
+  margin-right: 2rem;
+  background-color: #d8353b;
+  color: #fff;
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: #d8353b;
+    color: #fff;
+  }
+}
+
+.switch-btn {
+  @include btn-base();
+  background: var(--theme-button-bg-color);
+  height: 3.8rem;
+  min-width: 10rem;
+  padding: 0.5rem 1.5rem;
+  //min-width: 150px;
+  //width: 190px;
+  //max-width: 190px;
+  border-radius: 50px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  &:hover,
+  &:active,
+  &:focus {
+    background: var(--theme-button-bg-color);
+    box-shadow: none;
+  }
+  &:disabled {
+    color: var(--theme-main-text);
+    background-color: var(--theme-button-bg-color);
+    opacity: 0.6;
+  }
+
+  &.selected {
+    background: var(--theme-switch-button-bg);
+  }
+}
+
+.max-button {
+  @include btn-base();
+  border-radius: 12px;
+  background: var(--theme-max-btn);
+  &:hover,
+  &:active,
+  &:focus {
+    background: var(--theme-max-btn);
+  }
+}
+
+.main-action-btn {
+  @include btn-base();
+  width: 15rem;
+  padding: 1rem 1.5rem;
+  min-width: 13rem;
+  height: auto;
+  // background: var(--theme-max-btn);
+}
+
+@media only screen and (max-width: 600px) {
+  .header-btn {
+    width: 7rem;
+    margin-right: 1rem;
+  }
+  .switch-btn {
+    min-width: 6rem;
+    padding: 0.5rem 1rem;
+  }
+  .main-action-btn {
+    width: auto;
+  }
+}

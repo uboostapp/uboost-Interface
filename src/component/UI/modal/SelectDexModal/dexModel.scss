@@ -1,0 +1,94 @@
+// @import "../../../../theme.scss";
+
+.custom-coin-modal {
+  display: flex;
+  justify-content: center;
+  height: 100px;
+  align-items: flex-end;
+}
+
+.dex-logo {
+  width: 40px;
+  height: 40px;
+}
+
+.custom-search {
+  width: 90%;
+  height: 50px;
+  border-radius: 20px;
+  display: flex;
+  padding: 10px 30px;
+  color: var(--theme-main-text);
+  border: 0px solid #0d2e2f;
+  background-color: var(--theme-custom-search);
+  &:focus {
+    color: var(--theme-main-text);
+    background-color: var(--theme-custom-search);
+  }
+}
+
+.custom-body {
+  width: 100%;
+}
+
+.custom-row {
+  margin: auto;
+  width: 90%;
+  text-align: left;
+}
+
+.custom-logo {
+  padding: 2rem;
+  width: 20%;
+}
+
+.list-col {
+  height: 60px;
+  display: grid;
+  grid-template-columns: 70px auto;
+  align-items: center;
+  cursor: pointer;
+  &:hover {
+    background-color: var(--theme-dexmodel-hover);
+  }
+}
+
+.custom-row-body {
+  height: 380px;
+  overflow-y: auto;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+@mixin modalContent() {
+  border: none;
+  color: #fff;
+  height: 80%;
+}
+.modal-coin-dark {
+  .modal-content {
+    @include modalContent();
+    background-color: transparent;
+  }
+}
+
+.modal-coin-light {
+  .modal-content {
+    @include modalContent();
+    background-color: transparent;
+  }
+}
+
+// .light {
+//   .list-col {
+//     &:hover {
+//       background-color: #bfecf0;
+//     }
+//   }
+//   .custom-search {
+//     background-color: #f6f6f6;
+//      color:black;
+//   }
+// }

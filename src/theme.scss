@@ -1,0 +1,101 @@
+.light {
+  --theme-main-text: #3e3e3e;
+  --theme-main-text-invert: white;
+  --theme-page-background: linear-gradient(
+    252.44deg,
+    #7dd6d3 0%,
+    #ffffff 49.27%,
+    #7dd6d3 100%
+  );
+  // --theme-card-address:rgb(247, 248, 250);
+  // --theme-modal-account:#fff;
+  --theme-dexmodel-hover:#bfecf0;
+  --theme-custom-search:#f6f6f6;
+  --theme-cardbody-content:black;
+  --theme-transactonloader-btn:#ccfbf9;
+  --theme-modal-color:#fff;
+  --theme-paper-bg: #fcfcfc;
+  --theme-close-button:black;
+  --theme-text-color: #474747;
+  --theme-button-bg-color: #ffffff;
+  --theme-switch-button-bg: #ccfbf9;
+  --theme-max-btn: #ffffff;
+  --theme-modal-bg-color: #ffffff;
+  --theme-modal-backdrop: linear-gradient(
+    72.52deg,
+    rgba(154, 220, 223, 0.92) 2.4%,
+    rgba(210, 243, 247, 0.92) 52.21%,
+    rgba(154, 220, 223, 0.92) 99.97%
+  );
+  --theme-modal-child-color:#ccfbf9;
+  --theme-footer-color:#ccfbf9;
+}
+
+.dark {
+  // --theme-card-address:rgb(33, 36, 41);
+  // --theme-modal-account:rgb(25, 27, 31);
+  --theme-dexmodel-hover:#04101198;
+  --theme-cardbody-content:rgb(195, 197, 203);
+  --theme-custom-search:#0d2e2f;
+  --theme-transactonloader-btn:#215355;
+  --theme-modal-color:#061b1d;
+  --theme-main-text: white;
+  --theme-main-text-invert: #3e3e3e;
+  --theme-page-background: linear-gradient(
+    108.49deg,
+    #062829 14.09%,
+    #054548 46.64%,
+    #07383c 68.08%,
+    #071518 90.63%
+  );
+  --theme-paper-bg: #215355;
+  --theme-text-color: #ffffff;
+  --theme-close-button:white;
+  --theme-button-bg-color: #071f2187;
+  --theme-switch-button-bg: #071f2187;
+  --theme-max-btn: #205355;
+  --theme-modal-bg-color: linear-gradient(
+    306.61deg,
+    rgba(25, 116, 94, 0.189) 3.25%,
+    rgba(0, 219, 168, 0.3) 122.38%
+  );
+  --theme-modal-backdrop: radial-gradient(
+    61.97% 61.97% at 50.03% 44.69%,
+    #095d61 0%,
+    #0d2f36 100%
+  );
+  --theme-modal-child-color:#0B3039;
+  --theme-footer-color:#0B3039;
+  
+}
+
+@font-face {
+  font-family: "TimeTravel";
+  src: url(./assets//fonts/Timetravel-lgKje.ttf);
+}
+
+@mixin select() {
+  align-items: center;
+  display: grid;
+  justify-items: center;
+}
+
+@mixin btn-base() {
+  padding: 5px 10px;
+  border: #fff !important;
+  color: var(--theme-text-color);
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.14);
+  height: 55px;
+  &:hover,
+  &:active,
+  &:focus {
+    box-shadow: none;
+    filter: brightness(0.95);
+    color: var(--theme-text-color);
+  }
+
+  img {
+    height: 20px;
+    padding-right: 10px;
+  }
+}

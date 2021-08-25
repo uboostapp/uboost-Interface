@@ -1,0 +1,141 @@
+@import '../../../theme.scss';
+
+.custom-modalBody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 300px;
+  justify-content: center;
+}
+
+.modal-content {
+  position: absolute;
+  border-radius: 15px;
+  // padding-bottom: 4rem;
+  background-color: var(--theme-modal-color);
+  color: var(--theme-main-text);
+  padding: 20px 10px;
+  min-height: 370px;
+}
+
+.modal-chain {
+  .modal-content {
+    min-height: 200px;
+  }
+}
+// .model-switch-dark {
+//   .modal-content {
+//     background-color: #062829;
+//     color: #fff;
+//   }
+// }
+// .model-switch-light {
+//   .modal-content {
+//     background-color: #fff;
+//     color: black;
+//     // padding-top: 1.5rem;
+//   }
+// }
+.metamask-logo {
+  width: 35px;
+  height: 40px;
+}
+
+.custom-modal-btn {
+  @include btn-base();
+  display: flex;
+  align-items: center;
+  //justify-content: center;
+  // background: linear-gradient(
+  //   306.61deg,
+  //   rgba(25, 116, 94, 0.189) 3.25%,
+  //   rgba(0, 219, 168, 0.3) 122.38%
+  // );
+  background: var(--theme-modal-child-color);
+  height: 6rem;
+  width: 400px;
+  border-radius: 10px;
+
+  border: 0px solid #215355;
+  cursor: pointer;
+
+  margin: 1.4rem 0;
+  padding: 0 2.1rem;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background: linear-gradient(306.61deg, rgba(25, 116, 94, 0.189) 3.25%, rgba(0, 219, 168, 0.3) 122.38%);
+  }
+  img {
+    height: 30px;
+    padding-right: 10px;
+    width: 60px;
+  }
+
+  // div {
+  //   font-size: 1.5rem;
+  // }
+}
+
+.selectchain-title {
+  width: 100%;
+  text-align: center;
+}
+
+.selectWallet-title {
+  width: 100%;
+  .close span {
+    position: absolute;
+    right: 20px;
+  }
+  .close:hover {
+    color: rgb(143, 150, 172);
+  }
+}
+
+.network-logo {
+  width: 40px;
+  height: 50px;
+  align-self: center;
+}
+
+.network-title {
+  text-align: center;
+}
+
+.custom-selectchain-body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 1rem 1rem 4rem 1rem;
+}
+
+.list-balance {
+  margin-left: auto;
+}
+.selectchain-list {
+  cursor: pointer;
+  background: var(--theme-modal-child-color);
+  width: 120px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 30px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  justify-content: center;
+  &:hover,
+  &:active,
+  &:focus {
+    background: linear-gradient(306.61deg, rgba(25, 116, 94, 0.189) 3.25%, rgba(0, 219, 168, 0.3) 122.38%);
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  .custom-modal-btn {
+    width: 18rem;
+  }
+  .selectchain-list {
+    margin-bottom: 1rem;
+  }
+}

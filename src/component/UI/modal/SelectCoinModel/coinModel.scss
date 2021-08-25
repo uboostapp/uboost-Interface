@@ -1,0 +1,208 @@
+.modal-coin-dark {
+  .custom-coin-search {
+    background-color: #071f21;
+    border: 0px solid #071f21;
+    color: white;
+  }
+  .selectcoin-list {
+    background-color: #071f21;
+    color: #fff;
+  }
+  .modal-btn {
+    background-color: #215355;
+    color: #fff;
+  }
+  .nopoolfound-container {
+    color: white;
+  }
+  .notokenfound-container {
+    color: #fff;
+  }
+  .visituni-btn {
+    background-color: #071f21;
+    color: #fff;
+    a {
+      color: #fff;
+    }
+  }
+}
+
+.modal-coin-light {
+  .custom-coin-search {
+    background-color: #fff;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border: 0px solid #fff;
+  }
+  .selectcoin-list {
+    background-color: #fff;
+    color: black;
+  }
+  .modal-btn {
+    background-color: #7dd6d3;
+    color: black;
+  }
+  .nopoolfound-container {
+    color: black;
+  }
+  .notokenfound-container {
+    color: black;
+  }
+  .visituni-btn {
+    background-color: #fff;
+    color: black;
+    a {
+      color: black;
+    }
+  }
+}
+
+.custom-coin-search {
+  width: 35vw;
+  padding-left: 2rem;
+  height: 7.5vh;
+  border-radius: 30px;
+  display: flex;
+}
+.custom-modal-header {
+  border-bottom: 0;
+  margin-bottom: 30px;
+  padding-bottom: 0;
+}
+
+.custom-coin-body {
+  max-height: 420px;
+  overflow: auto;
+}
+.token-list {
+  display: grid;
+  width: 100%;
+  min-width: 95%;
+  justify-content: space-evenly;
+  grid-template-columns: repeat(3, 1fr);
+  grid-row-gap: 40px;
+  grid-column-gap: 70px;
+  overflow: scroll;
+  padding: 20px 0;
+}
+
+.selectcoin-list {
+  cursor: pointer;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 12px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  align-items: center;
+  max-width: 15rem;
+  padding: 0 10px;
+
+  .coinlist-subcontainer {
+    display: flex;
+    align-items: center;
+  }
+
+  .delIcon-container {
+    display: flex;
+    align-items: center;
+    img {
+      margin: 0 0.5rem;
+      height: 1.3rem;
+      width: 1.3rem;
+    }
+  }
+}
+.disabled {
+  cursor: not-allowed;
+  filter: brightness(0.5);
+}
+.searched-list {
+  cursor: auto;
+}
+.coin-logo {
+  width: 40px;
+  height: 40px;
+}
+
+.coin-title {
+  text-align: center;
+  padding-left: 5px;
+}
+
+.custom-coinlist-div {
+  display: flex;
+  align-items: center;
+}
+
+.modal-btn {
+  border: 0;
+  border-radius: 20px;
+  width: 6rem;
+  height: 1.8rem;
+  display: grid;
+  place-content: center;
+  font-size: 0.7rem;
+  width: 100%;
+}
+
+.nopoolfound-container {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 0 2rem;
+  h1 {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  p {
+    font-size: 0.8rem;
+  }
+  .visituni-btn {
+    width: 10rem;
+    border-radius: 20px;
+    border: 0;
+    height: 2.5rem;
+    display: grid;
+    place-content: center;
+    margin-top: 10px;
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .token-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .custom-modal-header {
+    display: flex;
+  }
+  .token-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+  .custom-coin-search {
+    width: 40vh;
+  }
+  .selectcoin-list {
+    width: 100%;
+    padding: 2rem 1rem;
+    justify-self: center;
+  }
+  .custom-modal-header {
+    padding: 0 0.8rem;
+  }
+}
+
+.notokenfound-container {
+  height: 80%;
+  h1 {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+}

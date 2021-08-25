@@ -1,0 +1,242 @@
+// @import "./theme.scss";
+@import './styles/button.scss';
+.App {
+  color: var(--theme-main-text);
+  background: var(--theme-page-background);
+  min-height: 100vh;
+  display: grid;
+  overflow: auto;
+  //grid-template-rows: 120px auto 100px;
+}
+.main-body {
+  display: grid;
+  overflow: auto;
+  place-content: center;
+}
+
+@media screen and (min-width: 1400) {
+  .container {
+    min-width: 90%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .liq-body {
+    padding: 10px 0;
+  }
+}
+
+.sr-only {
+  display: none;
+}
+
+.close {
+  position: absolute;
+  right: 10px;
+  top: 0;
+  background-color: transparent;
+  border: none;
+  color: var(--theme-close-button);
+  span {
+    font-size: 46px;
+  }
+}
+// custom card
+
+.paper {
+  // color: var(--theme-main-text-invert);
+  width: 100%;
+  min-height: 600px;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  padding-bottom: 10px;
+}
+
+.custom-card {
+  background-color: var(--theme-paper-bg);
+  box-shadow: 5px 5px 10px rgba(1, 9, 30, 0.2);
+  border-radius: 14px;
+  padding: 0rem 1rem;
+}
+.transactionHeader {
+  margin: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  p {
+    font-size: 0.8rem;
+    opacity: 0.5;
+  }
+  .balance-container {
+    opacity: 1;
+    display: flex;
+    justify-content: space-between;
+  }
+  .custom-dollarlogo {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  .balance {
+    font-weight: 500;
+    padding: 0rem 0.3rem;
+    font-size: 0.8rem;
+    min-width: 40%;
+  }
+}
+.input-card {
+  background: var(--theme-switch-button-bg);
+  border-radius: 23px;
+  // margin:0rem 1rem;
+  input {
+    background: transparent;
+    border: none;
+    color: inherit;
+    height: 50px;
+    font-size: 1.5rem;
+    width: 100%;
+    &:focus-visible {
+      border: none;
+      outline: 0;
+    }
+  }
+}
+
+.custom-card-body {
+  display: grid;
+  grid-gap: 15px;
+  height: 100%;
+  margin: 0 1rem;
+  //grid-template-rows: 160px 120px auto;
+}
+
+.network-message {
+  text-align: center;
+  font-weight: 500;
+  margin: 20px 20px 15px;
+  color: var(--theme-field-color);
+}
+
+.settings {
+  display: flex;
+  justify-content: flex-end;
+  height: 20px;
+  img {
+    cursor: pointer;
+  }
+}
+
+.approve-loader {
+  position: relative;
+  left: 2rem;
+}
+.spinner-border {
+  width: 18px;
+  height: 18px;
+}
+.main-action {
+  display: grid;
+  height: 100px;
+  place-items: center;
+}
+.selectDex {
+  @include select();
+  grid-template-columns: 45% 10% 45%;
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+}
+
+.selectCoin {
+  @include select();
+  grid-template-columns: 45% 10% 45%;
+  height: 85px;
+  display: flex;
+  justify-content: space-between;
+}
+.liquidityContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.liquidity {
+  font-weight: 500;
+  padding: 0.2rem 1rem;
+  font-size: 0.8rem;
+}
+
+.transactionBody {
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto auto;
+  grid-gap: 10px;
+}
+.modal-backdrop {
+  background: linear-gradient(
+    72.52deg,
+    rgba(154, 220, 223, 0.92) 2.4%,
+    rgba(210, 243, 247, 0.92) 52.21%,
+    rgba(154, 220, 223, 0.92) 99.97%
+  );
+}
+.dark {
+  .modal-backdrop {
+    background: radial-gradient(61.97% 61.97% at 50.03% 44.69%, #095d61 0%, #0d2f36 100%);
+  }
+}
+
+.swap-container {
+  height: 100%;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  .line {
+    width: 100%;
+    color: transparent;
+    border-top: 3px dashed var(--theme-main-text);
+    opacity: 1;
+  }
+  .lineGreen {
+    width: 100%;
+    color: transparent;
+    border-top: 3px dashed #0fcd2d;
+    opacity: 1;
+  }
+  .swapicon-container {
+    box-shadow: 1px 2px 4px rgba(1, 9, 30, 0.2);
+    background-color: var(--theme-button-bg-color);
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .selectDex {
+    grid-template-columns: 35% 30% 35%;
+  }
+  .selectCoin {
+    grid-template-columns: 35% 30% 35%;
+  }
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+.btn-check:checked + .btn-primary:focus,
+.btn-check:active + .btn-primary:focus,
+.btn-primary:active:focus,
+.btn-primary.active:focus,
+.show > .btn-primary.dropdown-toggle:focus {
+  box-shadow: none;
+}

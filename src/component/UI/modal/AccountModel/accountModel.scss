@@ -1,0 +1,103 @@
+p {
+  margin-bottom: 0;
+}
+
+// .modal-switch-light {
+//   .custom-card-address {
+//     background-color: rgb(247, 248, 250);
+//   }
+// }
+// .modal-switch-dark {
+//   .custom-card-address {
+//     background-color: rgb(33, 36, 41);
+//   }
+// }
+
+.custom-card-address {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  padding: 2rem;
+  background: var(--theme-paper-bg);
+  font-size: 1rem;
+}
+
+.custom-modal-address {
+  height: 23rem;
+}
+.account-modal-body {
+  padding: 0 0 4rem 0;
+}
+
+.custom-card-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  p {
+    font-size: 1rem;
+  }
+}
+
+.custom-modal-header .close:hover {
+  color: rgb(143, 150, 172);
+}
+
+// .card-title-header {
+//    color: rgb(143, 150, 172);
+//    margin: 0;
+//   justify-content: center;
+//   font-size: 1rem;
+//    float: left;
+//    display: flex;
+//   flex-wrap: wrap;
+// }
+
+.custom-card-title-btn {
+  font-size: 1rem;
+  border: 1px solid #4d8fea;
+  color: #2172e5;
+  background-color: transparent;
+  border-radius: 12px;
+  font-weight: 500;
+  padding: 4px 6px;
+}
+.custom-card-body {
+  padding: 0;
+  p {
+    font-size: large;
+    font-weight: bold;
+    //color:var(--theme-main-text);
+  }
+}
+.custom-cardbody-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+}
+.custom-copyaddress-link {
+  text-decoration: none;
+  color: var(--theme-main-text);
+}
+.custom-copyaddress-link:hover,
+.custom-copyaddress-link:focus,
+.custom-copyaddress-link:active {
+  cursor: pointer;
+  color: var(--theme-cardbody-content);
+}
+.custom-explorer-link {
+  color: var(--theme-main-text);
+  text-decoration: none;
+}
+.custom-explorer-link:hover,
+.custom-explorer-link:active,
+.custom-explorer-link:focus {
+  color: var(--theme-cardbody-content);
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+// @media only screen and (max-width: 500px) {
+//   .custom-modal-header {
+//     padding: 0 2rem;
+//   }
+// }
