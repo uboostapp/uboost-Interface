@@ -63,7 +63,7 @@ export const dexList: DexType[] = [
     name: 'QuickSwap',
     routerAddress: '0xa5E0829CaCEd8fFDD4De3c43696c57F7D7A678ff',
     network: 3,
-    logoURI: 'https://raw.githubusercontent.com/sameepsi/quickswap-interface/master/public/favicon.jpeg',
+    logoURI: 'https://i.imgur.com/8G7QIrR.png',
     fee: 0.3,
   },
   {
@@ -133,7 +133,7 @@ export const tokenList: TokenList[] = [
     symbol: 'QUICK',
     decimals: 18,
     chainId: 137,
-    logoURI: 'https://raw.githubusercontent.com/sameepsi/quickswap-interface/master/public/favicon.jpeg',
+    logoURI: 'https://i.imgur.com/8G7QIrR.png',
     dexId: 2,
   },
 
@@ -144,7 +144,7 @@ export const tokenList: TokenList[] = [
     symbol: 'QUICK',
     decimals: 18,
     chainId: 1,
-    logoURI: 'https://raw.githubusercontent.com/sameepsi/quickswap-interface/master/public/favicon.jpeg',
+    logoURI: 'https://i.imgur.com/8G7QIrR.png',
     dexId: 2,
   },
   {
