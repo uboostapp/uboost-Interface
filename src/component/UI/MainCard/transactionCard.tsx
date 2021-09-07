@@ -6,6 +6,7 @@ import TransactionLoaderModal from '../modal/TransactionLoaderModel/transactionL
 import { WalletContext } from 'context/connectWallet/connectWalletContext'
 import { CantFind } from 'Helpers/assets'
 import ConnectWalletModal from '../modal/ConnectWalletModel/connectWalletModal'
+import BigNumber from 'bignumber.js'
 
 const TransactionCard: FC = () => {
   const [transactionModel, setTransactionModel] = useState(false)
@@ -53,14 +54,14 @@ const TransactionCard: FC = () => {
     <>
       <div className={`transactionCard`}>
         <div className="transactionHeader">
-          <div>
+          <div className="header">
             <h3>Amount</h3>
             {token1 && <p>Enter liquidity from pool of {token1.symbol} on UniLend</p>}
           </div>
           <p className="balance-container">
             {token1Balance && connectedAccount && (
               <>
-                <div className="balance">Balance: {token1Balance.decimal}</div>
+                <span className="balance">Balance: {token1Balance.decimal}</span>
                 <img
                   src={token1 ? token1.logoURI : CantFind}
                   alt="dollar-logo"
@@ -97,7 +98,8 @@ const TransactionCard: FC = () => {
                   token2 === undefined ||
                   selectedDex === undefined ||
                   amount === '' ||
-                  amount > tokenBalance.fullAmount ||
+                  !amount ||
+                  new BigNumber(amount).gt(tokenBalance.fullAmount) ||
                   isTransferring
                 }
                 className="switch-btn selected main-action-btn"

@@ -206,3 +206,9 @@
     font-weight: 600;
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .custom-coin-body {
+    max-height: 500px;
+  }
+}

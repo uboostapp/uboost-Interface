@@ -1,4 +1,12 @@
-import { MetamaskLogo, ConnectWalletLogo, PolygonLogo, polyDexImg } from 'Helpers/assets'
+import {
+  MetamaskLogo,
+  ConnectWalletLogo,
+  PolygonLogo,
+  polyDexImg,
+  EthereumLogo,
+  BinanceLogo,
+  cryptinImg,
+} from 'Helpers/assets'
 import { Chain, DexType, Wallet, TokenList } from 'utils/types'
 
 export const walletList = (chain: number): Wallet[] => {
@@ -58,14 +66,14 @@ export const dexList: DexType[] = [
     logoURI: 'https://raw.githubusercontent.com/sameepsi/quickswap-interface/master/public/favicon.jpeg',
     fee: 0.3,
   },
-  // {
-  //   id: 3,
-  //   name: 'Dfyn',
-  //   routerAddress: '0x9695e0114e12C0d3A3636fAb5A18e6b737529023',
-  //   network: 3,
-  //   logoURI: 'https://raw.githubusercontent.com/dfyn/assets/main/DFYN_logo.png',
-  //   fee: 0.3,
-  // },
+  {
+    id: 3,
+    name: 'Dfyn',
+    routerAddress: '0xA102072A4C07F06EC3B4900FDC4C7B80b6c57429',
+    network: 3,
+    logoURI: 'https://raw.githubusercontent.com/dfyn/assets/main/DFYN_logo.png',
+    fee: 0.3,
+  },
   {
     id: 4,
     name: 'PancakeSwap',
@@ -77,7 +85,7 @@ export const dexList: DexType[] = [
   // {
   //   id: 5,
   //   name: 'PolyDex',
-  //   routerAddress: '0xC60aE14F2568b102F8Ca6266e8799112846DD088',
+  //   routerAddress: '0xBd13225f0a45BEad8510267B4D6a7c78146Be459',
   //   network: 3,
   //   logoURI: polyDexImg,
   //   fee: 0.3,
@@ -268,21 +276,10 @@ export const tokenList: TokenList[] = [
     dexId: 2,
   },
   {
-    id: 18,
-    name: 'Wrapped Matic',
-    address: '0xd0A1E359811322d97991E03f863a0C30C2cF029C',
-    symbol: 'WMATIC',
-    decimals: 18,
-    chainId: 80001,
-    logoURI:
-      'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x7D1AfA7B718fb893dB30A3aBc0Cfc608AaCfeBB0/logo.png',
-    dexId: 2,
-  },
-  {
     id: 19,
-    name: 'Ether',
-    address: '0x7ceB23fD6bC0adD59E62ac25578270cFf1b9f619',
-    symbol: 'ETH',
+    name: 'Wrapped Ether',
+    address: '0x5fb94e98de09789879076fc763429e1f2d0918b0',
+    symbol: 'WETH',
     decimals: 18,
     chainId: 56,
     logoURI:
@@ -291,22 +288,11 @@ export const tokenList: TokenList[] = [
   },
   {
     id: 20,
-    name: 'Ethereum',
-    address: '0x2170Ed0880ac9A755fd29B2688956BD959F933F8',
-    symbol: 'ETH',
+    name: 'Wrapped Ether',
+    address: '0x7ceb23fd6bc0add59e62ac25578270cff1b9f619',
+    symbol: 'WETH',
     decimals: 18,
     chainId: 137,
-    logoURI:
-      'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png',
-    dexId: 2,
-  },
-  {
-    id: 21,
-    name: 'Ethereum',
-    address: '0x714550C2C1Ea08688607D86ed8EeF4f5E4F22323',
-    symbol: 'ETH',
-    decimals: 18,
-    chainId: 80001,
     logoURI:
       'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png',
     dexId: 2,
@@ -334,20 +320,9 @@ export const tokenList: TokenList[] = [
     dexId: 3,
   },
   {
-    id: 24,
-    name: 'Wrapped Matic',
-    address: '0xd0A1E359811322d97991E03f863a0C30C2cF029C',
-    symbol: 'WMATIC',
-    decimals: 18,
-    chainId: 80001,
-    logoURI:
-      'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x7D1AfA7B718fb893dB30A3aBc0Cfc608AaCfeBB0/logo.png',
-    dexId: 3,
-  },
-  {
     id: 25,
-    name: 'Ethereum',
-    address: '0x2170Ed0880ac9A755fd29B2688956BD959F933F8',
+    name: 'Wrapped Ether',
+    address: '0x7ceb23fd6bc0add59e62ac25578270cff1b9f619',
     symbol: 'ETH',
     decimals: 18,
     chainId: 137,
@@ -402,9 +377,9 @@ export const tokenList: TokenList[] = [
   },
   {
     id: 31,
-    name: 'Ethereum',
-    address: '0x2170Ed0880ac9A755fd29B2688956BD959F933F8',
-    symbol: 'ETH',
+    name: 'Wrapped Ether',
+    address: '0x7ceb23fd6bc0add59e62ac25578270cff1b9f619',
+    symbol: 'WETH',
     decimals: 18,
     chainId: 137,
     logoURI:
@@ -436,11 +411,11 @@ export const tokenList: TokenList[] = [
   {
     id: 34,
     name: 'PolyDEX.Fi 2.0',
-    address: '0x4B1df511d59F5c73a420217cE58a77b462151c9E',
-    symbol: 'PLX',
+    address: '0xD1e6354fb05bF72A8909266203dAb80947dcEccF',
+    symbol: 'CNT',
     decimals: 18,
     chainId: 137,
-    logoURI: polyDexImg,
+    logoURI: cryptinImg,
     dexId: 5,
   },
 ]

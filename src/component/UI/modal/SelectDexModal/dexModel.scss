@@ -81,14 +81,10 @@
   }
 }
 
-// .light {
-//   .list-col {
-//     &:hover {
-//       background-color: #bfecf0;
-//     }
-//   }
-//   .custom-search {
-//     background-color: #f6f6f6;
-//      color:black;
-//   }
-// }
+@media only screen and (max-width: 600px) {
+  .modal-coin-dark {
+    .modal-content {
+      height: 90%;
+    }
+  }
+}

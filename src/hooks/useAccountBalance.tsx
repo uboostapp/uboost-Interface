@@ -21,7 +21,6 @@ export function useAccountBalance() {
         }
       }
       let ethBal = web3Service.getWei(balance, 'ether')
-      // let ethBalDeci = toFixed(parseFloat(ethBal), 3);
       setEthBalance(ethBal)
     } catch (e) {
       setEthBalance('')

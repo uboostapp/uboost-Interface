@@ -63,12 +63,12 @@
   border-bottom: 0;
   float: right;
   justify-content: center;
-  .custom-modal-dollartitle{
+  .custom-modal-dollartitle {
     width: 100%;
     text-align: center;
   }
-  .dollarTitleSubContainer{
-    h6{
+  .dollarTitleSubContainer {
+    h6 {
       font-size: 0.9rem;
       opacity: 0.8;
     }
@@ -133,6 +133,15 @@
   text-decoration: underline;
 }
 
-.transaction-readhere-link{
+.transaction-readhere-link {
   text-decoration: underline;
+}
+
+@media only screen and (max-width: 600px) {
+  .transactioncomp-modal-body {
+    padding: 20px;
+  }
+  .transaction-dollarmodal-btn {
+    max-height: 7rem;
+  }
 }

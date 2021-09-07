@@ -153,6 +153,10 @@ export default function WalletProvider(props) {
         let dex = dexList.find((item) => item.name.toLowerCase() === qpTokens.dex.toLowerCase())
         if (dex) setDex(dex)
       }
+      if (qpTokens?.network) {
+        let network = await chainList.find((item) => item.name.toLowerCase() === qpTokens.network.toLowerCase())
+        if (network) handleChainChange(network.id)
+      }
     }
     getToken()
   }, [qpTokens, allCoinList, allCoinList2])
@@ -342,7 +346,7 @@ export default function WalletProvider(props) {
       setConnectedAccount(accounts[0])
     })
     provider.on('message', (message: string) => {
-      console.log(message)
+      // console.log(message)
     })
     provider.on('disconnect', (code: number, reason: string) => {})
   }

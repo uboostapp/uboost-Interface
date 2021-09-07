@@ -11,6 +11,7 @@ import { WalletContext } from 'context/connectWallet/connectWalletContext'
 
 import './transactionLoaderModel.scss'
 import '../index.scss'
+import BigNumber from 'bignumber.js'
 
 const TransactionLoaderModal = (props) => {
   const data: any = useContext(ThemeContext)
@@ -32,6 +33,14 @@ const TransactionLoaderModal = (props) => {
 
   const [mode, setMode] = useState<string>('confirm')
   const [hash, setHash] = useState<any>()
+
+  // useEffect(() => {
+  //   console.log({ fee: fee, token1Balance: token1Balance, maxLiquidity: maxLiquidity, amount: amount })
+  //   console.log(
+  //     new BigNumber(fee.total).gt(new BigNumber(token1Balance.balance)) ||
+  //       new BigNumber(maxLiquidity).lt(new BigNumber(amount)),
+  //   )
+  // }, [fee, amount, maxLiquidity, token1Balance])
 
   useEffect(() => {
     if (transferHash !== '') {
@@ -112,15 +121,18 @@ const TransactionLoaderModal = (props) => {
                 </a>
               </h6>
               <Button
-                disabled={fee.uni + fee.dex > token1Balance.balance || maxLiquidity < amount}
+                disabled={
+                  // fee.total > token1Balance.balance || maxLiquidity < amount
+                  new BigNumber(fee.total).gt(new BigNumber(token1Balance.balance))
+                  // ||
+                  // new BigNumber(maxLiquidity).lt(new BigNumber(amount))
+                }
                 className="transaction-dollarmodal-btn"
                 onClick={confirmHandler}
               >
-                {fee.uni + fee.dex > token1Balance.balance
-                  ? 'Insufficient Balance'
-                  : maxLiquidity < amount
-                  ? 'Not Enough Liquidity on dex'
-                  : 'Confirm Transaction'}
+                {new BigNumber(fee.total).gt(new BigNumber(token1Balance.balance))
+                  ? `Not enough balance for fees`
+                  : `Confirm Transaction`}
               </Button>
             </Modal.Body>
           </>

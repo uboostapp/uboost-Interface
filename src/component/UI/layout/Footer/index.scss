@@ -19,7 +19,7 @@
   }
 }
 
-a{
+a {
   text-decoration: none;
   color: var(--theme-text-color);
   &:hover,
@@ -44,15 +44,25 @@ a{
   cursor: pointer;
 }
 @media only screen and (max-width: 600px) {
-  .footer-links{
+  .footer-links {
     justify-content: center;
+    width: auto;
   }
-  .footer-social-media{
+  .footer-social-media {
     justify-content: center;
   }
   .footer-nav-auto {
     &:first-child {
       padding: 0 30px 0 0px;
     }
+  }
+  .custom-footer-row {
+    // margin-bottom: 90px;
+    // padding-bottom: 10px;
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+  .footer-logo {
+    margin: 0.5rem;
   }
 }

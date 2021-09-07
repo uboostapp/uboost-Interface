@@ -26,7 +26,12 @@ function App(props) {
       let object = {}
       texts.forEach((item) => {
         let sear = item.split('=')
-        if ((sear !== '' && sear[0] === 'main_token') || sear[0] === 'base_token' || sear[0] === 'dex')
+        if (
+          (sear !== '' && sear[0] === 'main_token') ||
+          sear[0] === 'base_token' ||
+          sear[0] === 'dex' ||
+          sear[0] === 'network'
+        )
           object[sear[0]] = sear[1]
       })
       setQpTokens(object)
