@@ -35,7 +35,7 @@ const NavBar = () => {
                 <Button
                   className="header-btn"
                   onClick={() => {
-//                     setSelectChainModalShow(true)
+                    setSelectChainModalShow(true)
                   }}
                 >
                   {selectedChain.name ?? 'Select Chain'}

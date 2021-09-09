@@ -36,15 +36,15 @@ export const chainList: Chain[] = [
   //   name: 'Ethereum',
   //   logo: EthereumLogo,
   // },
-  // {
-  //   id: 2,
-  //   name: 'Binance',
-  //   logo: BinanceLogo,
-  // },
   {
     id: 3,
     name: 'Polygon',
     logo: PolygonLogo,
+  },
+    {
+    id: 2,
+    name: 'Binance',
+    logo: BinanceLogo,
   },
 ]
 
