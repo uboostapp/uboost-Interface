@@ -82,14 +82,22 @@ export const dexList: DexType[] = [
     logoURI: 'https://raw.githubusercontent.com/pancakeswap/pancake-frontend/develop/public/logo.png',
     fee: 0.2,
   },
-  // {
-  //   id: 5,
-  //   name: 'PolyDex',
-  //   routerAddress: '0xBd13225f0a45BEad8510267B4D6a7c78146Be459',
-  //   network: 3,
-  //   logoURI: polyDexImg,
-  //   fee: 0.3,
-  // },
+  {
+    id: 5,
+    name: 'PolyDex',
+    routerAddress: '0xBd13225f0a45BEad8510267B4D6a7c78146Be459',
+    network: 3,
+    logoURI: polyDexImg,
+    fee: 0.3,
+  },
+  {
+    id: 6,
+    name: 'CafeSwap',
+    routerAddress:'0x933DAea3a5995Fb94b14A7696a5F3ffD7B1E385A',
+    network: 2,
+    logoURI:"https://dex.cafeswap.finance/images/coins/BREW.png",
+    fee: 0.3
+  }
 ]
 
 export const tokenList: TokenList[] = [
@@ -418,4 +426,46 @@ export const tokenList: TokenList[] = [
     logoURI: cryptinImg,
     dexId: 5,
   },
+{
+    id: 35,
+    name: 'Wrapped Ether',
+    address: '0x5fb94e98de09789879076fc763429e1f2d0918b0',
+    symbol: 'WETH',
+    decimals: 18,
+    chainId: 56,
+    logoURI:
+      'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png',
+    dexId: 6,
+  },
+   {
+    id: 36,
+    name: 'UniLend Finance Token',
+    address: '0x2645d5f59d952ef2317c8e0aaa5a61c392ccd44d',
+    symbol: 'UFT',
+    decimals: 18,
+    chainId: 56,
+    logoURI:
+      'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x0202Be363B8a4820f3F4DE7FaF5224fF05943AB1/logo.png',
+    dexId: 6,
+  },
+  {
+    id: 37,
+    name: 'Wrapped BNB',
+    address: '0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c',
+    symbol: 'WBNB',
+    decimals: 18,
+    chainId: 56,
+    logoURI: 'https://cloudflare-ipfs.com/ipfs/QmPx8vRckSyfUPsRukExCLyhA1K9W6Ue43dBEM1L2NyX2D/',
+    dexId: 6,
+  },
+  {
+    id: 38,
+    name: 'CafeSwap Token',
+    address: '0x790Be81C3cA0e53974bE2688cDb954732C9862e1',
+    symbol: 'BREW',
+    decimals:18,
+    chainId: 56,
+    logoURI:'https://dex.cafeswap.finance/images/coins/BREW.png',
+    dexId:6,
+  }
 ]
