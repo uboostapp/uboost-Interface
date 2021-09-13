@@ -96,7 +96,15 @@ export const dexList: DexType[] = [
     routerAddress:'0x933DAea3a5995Fb94b14A7696a5F3ffD7B1E385A',
     network: 2,
     logoURI:"https://dex.cafeswap.finance/images/coins/BREW.png",
-    fee: 0.3
+    fee: 0.2
+  },
+  {
+    id:7,
+    name:'ApeSwap',
+    routerAddress: '0xcF0feBd3f17CEf5b47b0cD257aCf6025c5BFf3b7',
+    network: 2,
+    logoURI:'https://app.apeswap.finance/static/media/logo_ape.912139da.svg',
+    fee: 0.2
   }
 ]
 
@@ -467,5 +475,48 @@ export const tokenList: TokenList[] = [
     chainId: 56,
     logoURI:'https://dex.cafeswap.finance/images/coins/BREW.png',
     dexId:6,
-  }
+  },
+  {
+    id: 39,
+    name:'ApeSwapFinance Banana',
+    address: '0x603c7f932ED1fc6575303D8Fb018fDCBb0f39a95',
+    symbol: 'BANANA',
+    decimals: 18,
+    chainId: 56,
+    logoURI:
+      'https://raw.githubusercontent.com/ApeSwapFinance/apeswap-token-lists/main/assets/BANANA.svg',
+    dexId: 7,
+  },
+  {
+    id: 40,
+    name: 'Wrapped Ether',
+    address: '0x5fb94e98de09789879076fc763429e1f2d0918b0',
+    symbol: 'WETH',
+    decimals: 18,
+    chainId: 56,
+    logoURI:
+      'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png',
+    dexId: 7,
+  },
+   {
+    id: 41,
+    name: 'UniLend Finance Token',
+    address: '0x2645d5f59d952ef2317c8e0aaa5a61c392ccd44d',
+    symbol: 'UFT',
+    decimals: 18,
+    chainId: 56,
+    logoURI:
+      'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x0202Be363B8a4820f3F4DE7FaF5224fF05943AB1/logo.png',
+    dexId: 7,
+  },
+  {
+    id: 42,
+    name: 'Wrapped BNB',
+    address: '0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c',
+    symbol: 'WBNB',
+    decimals: 18,
+    chainId: 56,
+    logoURI: 'https://cloudflare-ipfs.com/ipfs/QmPx8vRckSyfUPsRukExCLyhA1K9W6Ue43dBEM1L2NyX2D/',
+    dexId: 7,
+  },
 ]
