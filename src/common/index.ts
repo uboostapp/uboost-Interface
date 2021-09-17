@@ -6,6 +6,8 @@ import {
   EthereumLogo,
   BinanceLogo,
   cryptinImg,
+  comethImg,
+  ESWLogo,
 } from 'Helpers/assets'
 import { Chain, DexType, Wallet, TokenList } from 'utils/types'
 
@@ -31,20 +33,20 @@ export const walletList = (chain: number): Wallet[] => {
 }
 
 export const chainList: Chain[] = [
-  // {
-  //   id: 1,
-  //   name: 'Ethereum',
-  //   logo: EthereumLogo,
-  // },
+  {
+    id: 1,
+    name: 'Ethereum',
+    logo: EthereumLogo,
+  },
+  {
+    id: 2,
+    name: 'Binance',
+    logo: BinanceLogo,
+  },
   {
     id: 3,
     name: 'Polygon',
     logo: PolygonLogo,
-  },
-    {
-    id: 2,
-    name: 'Binance',
-    logo: BinanceLogo,
   },
 ]
 
@@ -90,30 +92,46 @@ export const dexList: DexType[] = [
     logoURI: polyDexImg,
     fee: 0.3,
   },
+  // {
+  //   id: 6,
+  //   name: 'CafeSwap',
+  //   routerAddress: '0x933DAea3a5995Fb94b14A7696a5F3ffD7B1E385A',
+  //   network: 2,
+  //   logoURI: 'https://dex.cafeswap.finance/images/coins/BREW.png',
+  //   fee: 0.2,
+  // },
+  // {
+  //   id: 7,
+  //   name: 'ApeSwap',
+  //   routerAddress: '0xcF0feBd3f17CEf5b47b0cD257aCf6025c5BFf3b7',
+  //   network: 2,
+  //   logoURI: 'https://app.apeswap.finance/static/media/logo_ape.912139da.svg',
+  //   fee: 0.2,
+  // },
+  // {
+  //   id: 8,
+  //   name: 'ApeSwap',
+  //   routerAddress: '0xC0788A3aD43d79aa53B09c2EaCc313A787d1d607',
+  //   network: 3,
+  //   logoURI: 'https://app.apeswap.finance/static/media/logo_ape.912139da.svg',
+  //   fee: 0.2,
+  // },
   {
-    id: 6,
-    name: 'CafeSwap',
-    routerAddress:'0x933DAea3a5995Fb94b14A7696a5F3ffD7B1E385A',
-    network: 2,
-    logoURI:"https://dex.cafeswap.finance/images/coins/BREW.png",
-    fee: 0.2
-  },
-  {
-    id:7,
-    name:'ApeSwap',
-    routerAddress: '0xcF0feBd3f17CEf5b47b0cD257aCf6025c5BFf3b7',
-    network: 2,
-    logoURI:'https://app.apeswap.finance/static/media/logo_ape.912139da.svg',
-    fee: 0.2
-  },
-    {
-    id: 8,
-    name: 'ApeSwap',
-    routerAddress: '0xC0788A3aD43d79aa53B09c2EaCc313A787d1d607',
+    id: 9,
+    name: 'Cometh',
+    routerAddress: '0x93bcDc45f7e62f89a8e901DC4A0E2c6C427D9F25',
     network: 3,
-    logoURI: 'https://app.apeswap.finance/static/media/logo_ape.912139da.svg',
-    fee: 0.2,
+    logoURI: comethImg,
+    fee: 0.3,
   },
+  // {
+  //   id: 10,
+  //   name: 'EmiSwap',
+  //   routerAddress: '',
+  //   network: 1,
+  //   logoURI: ESWLogo,
+  //   fee: 0.3,
+  // },
 ]
 
 export const tokenList: TokenList[] = [
@@ -389,34 +407,12 @@ export const tokenList: TokenList[] = [
     dexId: 5,
   },
   {
-    id: 30,
-    name: 'Wrapped Matic',
-    address: '0xd0A1E359811322d97991E03f863a0C30C2cF029C',
-    symbol: 'WMATIC',
-    decimals: 18,
-    chainId: 80001,
-    logoURI:
-      'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x7D1AfA7B718fb893dB30A3aBc0Cfc608AaCfeBB0/logo.png',
-    dexId: 5,
-  },
-  {
     id: 31,
     name: 'Wrapped Ether',
     address: '0x7ceb23fd6bc0add59e62ac25578270cff1b9f619',
     symbol: 'WETH',
     decimals: 18,
     chainId: 137,
-    logoURI:
-      'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png',
-    dexId: 5,
-  },
-  {
-    id: 32,
-    name: 'Ethereum',
-    address: '0x714550C2C1Ea08688607D86ed8EeF4f5E4F22323',
-    symbol: 'ETH',
-    decimals: 18,
-    chainId: 80001,
     logoURI:
       'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png',
     dexId: 5,
@@ -442,18 +438,18 @@ export const tokenList: TokenList[] = [
     logoURI: cryptinImg,
     dexId: 5,
   },
-{
+  {
     id: 35,
-    name: 'Wrapped Ether',
+    name: 'Ether',
     address: '0x5fb94e98de09789879076fc763429e1f2d0918b0',
-    symbol: 'WETH',
+    symbol: 'ETH',
     decimals: 18,
     chainId: 56,
     logoURI:
       'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png',
     dexId: 6,
   },
-   {
+  {
     id: 36,
     name: 'UniLend Finance Token',
     address: '0x2645d5f59d952ef2317c8e0aaa5a61c392ccd44d',
@@ -466,9 +462,9 @@ export const tokenList: TokenList[] = [
   },
   {
     id: 37,
-    name: 'Wrapped BNB',
+    name: 'BNB',
     address: '0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c',
-    symbol: 'WBNB',
+    symbol: 'BNB',
     decimals: 18,
     chainId: 56,
     logoURI: 'https://cloudflare-ipfs.com/ipfs/QmPx8vRckSyfUPsRukExCLyhA1K9W6Ue43dBEM1L2NyX2D/',
@@ -479,20 +475,19 @@ export const tokenList: TokenList[] = [
     name: 'CafeSwap Token',
     address: '0x790Be81C3cA0e53974bE2688cDb954732C9862e1',
     symbol: 'BREW',
-    decimals:18,
+    decimals: 18,
     chainId: 56,
-    logoURI:'https://dex.cafeswap.finance/images/coins/BREW.png',
-    dexId:6,
+    logoURI: 'https://dex.cafeswap.finance/images/coins/BREW.png',
+    dexId: 6,
   },
   {
     id: 39,
-    name:'ApeSwapFinance Banana',
+    name: 'ApeSwapFinance Banana',
     address: '0x603c7f932ED1fc6575303D8Fb018fDCBb0f39a95',
     symbol: 'BANANA',
     decimals: 18,
     chainId: 56,
-    logoURI:
-      'https://raw.githubusercontent.com/ApeSwapFinance/apeswap-token-lists/main/assets/BANANA.svg',
+    logoURI: 'https://raw.githubusercontent.com/ApeSwapFinance/apeswap-token-lists/main/assets/BANANA.svg',
     dexId: 7,
   },
   {
@@ -506,7 +501,7 @@ export const tokenList: TokenList[] = [
       'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png',
     dexId: 7,
   },
-   {
+  {
     id: 41,
     name: 'UniLend Finance Token',
     address: '0x2645d5f59d952ef2317c8e0aaa5a61c392ccd44d',
@@ -519,9 +514,9 @@ export const tokenList: TokenList[] = [
   },
   {
     id: 42,
-    name: 'Wrapped BNB',
+    name: 'BNB',
     address: '0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c',
-    symbol: 'WBNB',
+    symbol: 'BNB',
     decimals: 18,
     chainId: 56,
     logoURI: 'https://cloudflare-ipfs.com/ipfs/QmPx8vRckSyfUPsRukExCLyhA1K9W6Ue43dBEM1L2NyX2D/',
@@ -529,9 +524,9 @@ export const tokenList: TokenList[] = [
   },
   {
     id: 43,
-    name: 'Wrapped Matic',
+    name: 'Matic',
     address: '0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270',
-    symbol: 'WMATIC',
+    symbol: 'MATIC',
     decimals: 18,
     chainId: 137,
     logoURI:
@@ -569,5 +564,69 @@ export const tokenList: TokenList[] = [
     chainId: 137,
     logoURI: 'https://raw.githubusercontent.com/ApeSwapFinance/apeswap-token-lists/main/assets/BANANA.svg',
     dexId: 8,
+  },
+  {
+    id: 47,
+    name: 'Matic',
+    address: '0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270',
+    symbol: 'MATIC',
+    decimals: 18,
+    chainId: 137,
+    logoURI:
+      'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x7D1AfA7B718fb893dB30A3aBc0Cfc608AaCfeBB0/logo.png',
+    dexId: 9,
+  },
+  {
+    id: 48,
+    name: 'Ether',
+    address: '0x7ceb23fd6bc0add59e62ac25578270cff1b9f619',
+    symbol: 'ETH',
+    decimals: 18,
+    chainId: 137,
+    logoURI:
+      'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png',
+    dexId: 9,
+  },
+  {
+    id: 49,
+    name: 'UniLend Finance Token',
+    address: '0x5b4cf2c120a9702225814e18543ee658c5f8631e',
+    symbol: 'UFT',
+    decimals: 18,
+    chainId: 137,
+    logoURI:
+      'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x0202Be363B8a4820f3F4DE7FaF5224fF05943AB1/logo.png',
+    dexId: 9,
+  },
+  {
+    id: 50,
+    name: 'Must',
+    address: '0x9c78ee466d6cb57a4d01fd887d2b5dfb2d46288f',
+    symbol: 'MUST',
+    decimals: 18,
+    chainId: 137,
+    logoURI: 'https://polygonscan.com/token/images/cometh_32.png',
+    dexId: 9,
+  },
+  {
+    id: 51,
+    name: 'Wrapped Ether',
+    address: '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2',
+    symbol: 'WETH',
+    decimals: 18,
+    chainId: 1,
+    logoURI:
+      'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png',
+    dexId: 10,
+  },
+  {
+    id: 52,
+    name: 'EmiSwap - EmiDao Token',
+    address: '0x5a75a093747b72a0e14056352751edf03518031d',
+    symbol: 'ESW',
+    decimals: 18,
+    chainId: 1,
+    logoURI: ESWLogo,
+    dexId: 10,
   },
 ]
