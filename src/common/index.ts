@@ -93,14 +93,14 @@ export const dexList: DexType[] = [
     logoURI: polyDexImg,
     fee: 0.3,
   },
-  // {
-  //   id: 6,
-  //   name: 'CafeSwap',
-  //   routerAddress: '0x933DAea3a5995Fb94b14A7696a5F3ffD7B1E385A',
-  //   network: 2,
-  //   logoURI: 'https://dex.cafeswap.finance/images/coins/BREW.png',
-  //   fee: 0.2,
-  // },
+  {
+    id: 6,
+    name: "CafeSwap",
+    routerAddress: "0x933DAea3a5995Fb94b14A7696a5F3ffD7B1E385A",
+    network: 2,
+    logoURI: "https://dex.cafeswap.finance/images/coins/BREW.png",
+    fee: 0.2,
+  },
   // {
   //   id: 7,
   //   name: 'ApeSwap',
@@ -133,14 +133,14 @@ export const dexList: DexType[] = [
     logoURI: ESWLogo,
     fee: 0.3,
   },
-  // {
-  //   id: 11,
-  //   name: 'CafeSwap',
-  //   routerAddress: '0x9055682E58C74fc8DdBFC55Ad2428aB1F96098Fc',
-  //   network: 3,
-  //   logoURI: 'https://dex.cafeswap.finance/images/coins/BREW.png',
-  //   fee: 0.2,
-  // },
+  {
+    id: 11,
+    name: "CafeSwap",
+    routerAddress: "0x9055682E58C74fc8DdBFC55Ad2428aB1F96098Fc",
+    network: 3,
+    logoURI: "https://dex.cafeswap.finance/images/coins/BREW.png",
+    fee: 0.2,
+  },
 ];
 
 export const tokenList: TokenList[] = [
