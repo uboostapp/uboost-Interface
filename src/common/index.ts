@@ -141,6 +141,14 @@ export const dexList: DexType[] = [
     logoURI: "https://dex.cafeswap.finance/images/coins/BREW.png",
     fee: 0.2,
   },
+  {
+    id: 12,
+    name: "EmiSwap",
+    routerAddress: "0x38680777a6A402E98Fa4609725664f6766c2c46a",
+    network: 3,
+    logoURI: ESWLogo,
+    fee: 0.3,
+  },
 ];
 
 export const tokenList: TokenList[] = [
@@ -687,5 +695,48 @@ export const tokenList: TokenList[] = [
     logoURI:
       "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png",
     dexId: 11,
+  },
+  {
+    id: 57,
+    name: "UniLend Finance Token",
+    address: "0x5b4cf2c120a9702225814e18543ee658c5f8631e",
+    symbol: "UFT",
+    decimals: 18,
+    chainId: 137,
+    logoURI:
+      "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x0202Be363B8a4820f3F4DE7FaF5224fF05943AB1/logo.png",
+    dexId: 12,
+  },
+  {
+    id: 58,
+    name: "Matic",
+    address: "0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270",
+    symbol: "MATIC",
+    decimals: 18,
+    chainId: 137,
+    logoURI:
+      "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x7D1AfA7B718fb893dB30A3aBc0Cfc608AaCfeBB0/logo.png",
+    dexId: 12,
+  },
+  {
+    id: 59,
+    name: "Ether",
+    address: "0x7ceb23fd6bc0add59e62ac25578270cff1b9f619",
+    symbol: "ETH",
+    decimals: 18,
+    chainId: 137,
+    logoURI:
+      "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png",
+    dexId: 12,
+  },
+  {
+    id: 60,
+    name: "EmiSwap - EmiDao Token",
+    address: "0xd2A2a353D28e4833FAFfC882f6649c9c884a7D8f",
+    symbol: "ESW",
+    decimals: 18,
+    chainId: 137,
+    logoURI: ESWLogo,
+    dexId: 12,
   },
 ];
